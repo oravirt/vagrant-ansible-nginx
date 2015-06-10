@@ -1,6 +1,6 @@
 <b> What? </b>
 
-This vagrantfile (using Virtualbox) creates any number of nginx web-nodes and can provision them using the playbook lb-nginx.yml. By default it will create 3 web nodes and they are fronted by a loadbalancer (also running nginx). 
+This vagrantfile (using Virtualbox) creates any number of nginx web-nodes and can provision them using the playbook lb-nginx.yml. By default it will create 3 web nodes and they are fronted by a loadbalancer (also running nginx).
 If you want to add a new web node, just alter the hosts.yml file to create an extra node, run the playbook and it is in use.
 
 The provisioning step has been commented out from the Vagrantfile, since it will run for every machine that gets created. So, it is faster to run the playbook manually after the VM's are created.
