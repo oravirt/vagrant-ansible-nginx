@@ -19,5 +19,5 @@ print
 print "Making sure loadbalancing is working. Should get an even number of hits on each node"
 print
 for host in sorted(counted_output):       # Loop through the sorted list
-	print host, counted_output[host]  # Pretty printing of the list
+	print "%s: %s" % (host, counted_output[host])  # Pretty printing of the list
 print
