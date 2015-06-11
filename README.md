@@ -17,8 +17,9 @@ nginx - Installs and configures an n-node web cluster fronted by a loadbalancer
 
 Example Playbook
 ----------------
+To run the playbook, execute the 'run-ansible-playbook.sh' script and pass in the playbook.
 
-ansible-playbook lb-nginx.yml -i inventory
+./run-ansible-playbook.sh lb-nginx.yml
 
 License
 -------
