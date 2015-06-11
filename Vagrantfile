@@ -14,7 +14,7 @@ require "fileutils"
 f = File.open("inventory","w")
 servers.each do |servers|
  f.puts servers["group"]
- f.puts servers["name"] + "  ansible_ssh_host=" + servers["ip"] + "  ansible_ssh_user=vagrant " + " ansible_ssh_private_key_file=" + servers["private_key"] + "  ansible_host_key_checking=false ansible_ssh_args='-o UserKnownHostsFile=/dev/null'"
+ f.puts servers["name"] + "  ansible_ssh_host=" + servers["ip"] + "  ansible_ssh_user=vagrant " + " ansible_ssh_private_key_file=" + servers["private_key"]
 end # servers.each
 f.close
 
