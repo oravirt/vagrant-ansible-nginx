@@ -19,7 +19,7 @@ events {
 http {
     upstream lbtest {
     {% for host in groups['webservers'] %}
-   	server {{ hostvars[host]['ansible_eth1']['ipv4']['address'] }}:80 ;
+   	server {{ hostvars[host].ansible_eth1.ipv4.address }}:80 ;
     {% endfor %}
     }
  

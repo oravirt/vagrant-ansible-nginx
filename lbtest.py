@@ -14,7 +14,7 @@ for i in range(1,requests):
         host = host.rstrip('\n')     # Remove new lines
         output.append(host)          # Append each response to list
 
-counted_output = Counter(output)          # Count the number of hosts and occurences of each host
+counted_output = Counter(output)          # Count the number of hosts and occurrences of each host
 print
 print "Making sure loadbalancing is working. Should get an even number of hits on each node"
 print
