@@ -1,14 +1,28 @@
 #!/usr/bin/env python
 from urllib2 import urlopen
 from collections import Counter
+import argparse
 
 
-url='http://192.168.9.90'        # The URL to test
-requests=301                     # Number of requests
-output = []                      # Empty list
+def get_args():
+	parser = argparse.ArgumentParser(description='Script to see if loadblancing is working')
+
+	parser.add_argument('-u', '--url', type=str, required = True, help="The URL to connect to")
+ 
+	parser.add_argument('-r','--requests', type=int, required = True, help="The number of requests to make")
+
+	args = parser.parse_args() 
+
+	requests = args.requests
+	url = args.url
+
+	return requests, url
+
+requests, url = get_args()
+output = []	                     # Empty list
 
 print
-for i in range(1,requests):
+for i in range(0,requests):
         response = urlopen (url)     # Make the requests
         host = response.read()       # Read the response
         host = host.rstrip('\n')     # Remove new lines
