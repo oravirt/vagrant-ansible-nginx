@@ -22,7 +22,7 @@ requests, url = get_args()
 output = []	                     # Empty list
 
 print
-for i in range(0,requests):
+for i in range(requests):
         response = urlopen (url)     # Make the requests
         host = response.read()       # Read the response
         host = host.rstrip('\n')     # Remove new lines
